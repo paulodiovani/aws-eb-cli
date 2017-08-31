@@ -2,7 +2,7 @@ FROM alpine:3.6
 RUN apk -v --no-cache add \
         python \
         py-pip \
-        openssh \
+        openssh-client \
         git \
         && \
     pip install --upgrade awsebcli
