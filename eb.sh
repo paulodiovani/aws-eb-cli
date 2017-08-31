@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 set -o errexit
-set -o nounset
 set -o pipefail
 
 # enable interruption signal handling
@@ -14,5 +13,5 @@ docker run --rm \
 	-e "AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION}" \
 	-v "$(pwd):/project" \
 	-v "${HOME}/.ssh:/root/.ssh" \
-	paulodiovani/aws-cli \
+	paulodiovani/aws-eb-cli \
 	$@
