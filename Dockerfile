@@ -1,9 +1,10 @@
 FROM alpine:3.6
 RUN apk -v --no-cache add \
-        python \
-        py-pip \
-        openssh-client \
         git \
+        less \
+        openssh-client \
+        py-pip \
+        python \
         && \
     pip install --upgrade awsebcli
 VOLUME /root/.aws
