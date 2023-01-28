@@ -1,12 +1,13 @@
-FROM alpine:3.6
+FROM alpine:latest
 RUN apk -v --no-cache add \
         git \
         less \
         openssh-client \
-        py-pip \
-        python \
+        py3-pip \
+        python3 \
         && \
-    pip install --upgrade awsebcli
+    pip3 install --upgrade awsebcli --ignore-installed six
+RUN git config --global --add safe.directory /project
 VOLUME /root/.aws
 VOLUME /project
 WORKDIR /project
